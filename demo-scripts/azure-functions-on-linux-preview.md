@@ -47,3 +47,37 @@ sudo apt-get update && sudo apt-get upgrade
 
 ```
 
+## Login to the Azure CLI
+
+Reference: https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?view=azure-cli-latest
+
+To use the interactive login (and then go to  https://aka.ms/devicelogin  )
+
+```
+az login
+```
+or
+
+```
+az login -u <username> -p <password>
+```
+
+or (recommended) use a service principal 
+
+```
+az login --service-principal -u <user> -p <password-or-cert> --tenant <tenant>
+```
+
+## Create the Azure Resources
+
+```
+# Create a Resource Group
+az group create -n adams-linux-rg -l "South Central US"
+
+# Create a Linux App Service Plan (use S2 or S3 as the sku value for larger VMs)
+az appservice plan create -n plan-name -g rg-name --is-linux -l "South Central US" --sku S1 --number-of-workers 1
+
+# Create a storage account
+az storage account create -n storage-name --location "South Central US" --resource-group rg-name --sku Standard_LRS
+
+```
