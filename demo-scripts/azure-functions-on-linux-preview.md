@@ -8,13 +8,16 @@ Either in the portal or API
 ## Connect to the Linux VM using SSH
 ``` 
 ssh adamstephensen@52.187.183.175
+
+ssh adamstephensen@servername.southeastasia.cloudapp.azure.com
+
 ```
 
 ## Add Azure CLI 2.0 to a linux machine
 
 - Install the Azure CLI 2.0 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
-- Modify the courses list
+- Modify the sourses list
 ```
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | \
      sudo tee /etc/apt/sources.list.d/azure-cli.list

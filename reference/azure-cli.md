@@ -4,6 +4,14 @@
 [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
 
 
+## Start and stop a vm
+
+```
+az vm start --resource-group dev-vms --name vs2017-4
+
+az vm deallocate --resource-group dev-vms --name vs2017-4
+```
+
 ## Get a list of the available VM Sizes
 
 ```
