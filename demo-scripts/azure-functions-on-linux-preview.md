@@ -9,7 +9,7 @@ Either in the portal or API
 ``` 
 ssh adamstephensen@52.187.183.175
 
-ssh adamstephensen@adams-az-cli-2.southeastasia.cloudapp.azure.com
+ssh adamstephensen@adams-az-cli-2.australiaeast.cloudapp.azure.com
 
 ```
 
